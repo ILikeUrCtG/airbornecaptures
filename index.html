@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Hello, world!</title>
+	<title>Airborne Captures</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link rel="icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="assets/icon.png">
 </head>
 <body>
 	<div class="header">
@@ -17,34 +18,68 @@
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="portfolio.html">Portfolio</a>
-			<a href="form.html">Request a Quote</a>
+			<a href="request-a-quote.html">Request a Quote</a>
 		</nav>
 	</div>
 	
 	<div class="backgroundVideoBox">
 		<h1>Your World From Above</h1>
 		<img src="assets/arrow.gif" id="arrow">
-		<video loop muted autoplay id="video1">
+		<video loop muted id="video1">
 			<source src="assets/video1.mp4" type="video/mp4">
 		</video>
 	</div>
 	
 	<div class="homeImages">
-		<img src="assets/photos/01.png">
-		<img src="assets/photos/02.png">
-		<img src="assets/photos/05.png">
+		<img src="assets/photos/01.png" alt="Image 1" onclick="openOverlay(0)">
+		<img src="assets/photos/02.png" alt="Image 2" onclick="openOverlay(1)">
+		<img src="assets/photos/05.png" alt="Image 3" onclick="openOverlay(2)">
 	</div>
 
+	<div id="imageOverlay" class="overlay">
+		<span class="close" onclick="closeOverlay()">&times;</span>
+		<img id="overlayImage" src="" alt="Overlay Image">
+		<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+		<a class="next" onclick="changeImage(1)">&#10095;</a>
+	</div>
+
+	<script>
+		let currentImageIndex = 0;
+		const images = [
+			"assets/photos/01.png",
+			"assets/photos/02.png",
+			"assets/photos/05.png"
+		];
+
+		function openOverlay(imageIndex) {
+			document.getElementById("overlayImage").src = images[imageIndex];
+			currentImageIndex = imageIndex;
+			document.getElementById("imageOverlay").style.display = "block";
+		}
+
+		function closeOverlay() {
+			document.getElementById("imageOverlay").style.display = "none";
+		}
+
+		function changeImage(direction) {
+			currentImageIndex += direction;
+			if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+			if (currentImageIndex >= images.length) currentImageIndex = 0;
+			document.getElementById("overlayImage").src = images[currentImageIndex];
+		}
+	</script>
+
+
 	<div class="homeFlexBox">
-		<div id="panoBox">
+		<div>
 			<iframe id="homePano" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/uMFctVfNrg"></iframe>
 		</div>
 		<div id="aboutMe">
 			<h2>About Me and My Services</h2>
             <p>
-                My name is Ryan Stein, and I have had an interest in drones ever since I first got one when I was 11 years old. Ever since, I have taken a keen interest in the field of drone photography and videography. I currently work with L & B Travel, creating drone travel videos of all kinds.
+                My name is Ryan Stein, and I have had an interest in drones ever since I first got one when I was 11 years old. From that day on, I have devoloped my skills in drone photgraphy and videography. I currently work with L & B Travel, creating drone travel videos of all kinds.
                 <ul>
-                    <li>Although I have recently started this business, I have over 50 hours of drone flight experience and would like to expand my horizons to all drone photography needs.</li> <br>
+                    <li>I have over 50 hours of professional drone flight experience and would like to expand my horizons to all drone photography needs.</li> <br>
                     <li>I provide drone photography services for all purposes to all those within a 40-mile radius of the Encino area of Los Angeles.</li> <br>
                     <li>I will make sure I capture the shots you need and add in some of my own extra shots so you won’t miss out on a thing.</li> <br>
                 </ul>

@@ -1,12 +1,14 @@
 body {
 	margin: 0;
  	line-height: 1.6;
-	font-family: 'Open Sans', sans-serif;
 }
 
 .header {
 	display: flex;
 	background: #ec6342;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
 }
 
 #logo {
@@ -21,6 +23,7 @@ body {
 #video1 {
 	width: 100%;
 	z-index: -1;
+	margin-top: 75px;
 }
 
 h1 {
@@ -28,14 +31,14 @@ h1 {
 	position: absolute;
 	left:50%;
 	color: white;
-    margin: 100px 0 0 -420px;
-	font-family: "Times New Roman", Times, serif;	
+    margin: 175px 0 0 -420px;
+	display: flex;
 }
 
 #arrow {
 	position: absolute;
 	left:50%;
-    margin: 50vh 0 0 -160px;
+    margin: 65vh 0 0 -160px;
 }
 
 nav {
@@ -47,17 +50,60 @@ nav a {
 	padding: 30px;
 	color: white;
 	text-decoration: none;
-	font-family: "Times New Roman", Times, serif;	
 }
 
 .homeImages {
 	display: flex;
 	justify-content: space-evenly;
 }
+
 .homeImages img {
 	margin: 40px;
 	width: 100%;
 	border-radius: 10px;
+	cursor: pointer;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+	text-align: center;
+}
+
+.overlay img {
+	margin-top: 10%;
+	max-height: 70%;
+}
+
+.close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+
+.prev {
+	left: 20px;
+}
+
+.next {
+	right: 20px;
 }
 
 .homeFlexBox {
@@ -67,6 +113,7 @@ nav a {
 
 #aboutMe {
 	margin: 0 40px 0 80px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #homePano {
@@ -93,7 +140,7 @@ nav a {
 #portfolioPano {
 	height: 40vh;
 	width: 100%;
-	margin: 20px;
+	margin: 120px 20px 20px 20px;
 	border-radius: 10px;
 	border: 1px solid white;
 }
@@ -102,15 +149,92 @@ nav a {
 	display: flex;
 }
 
-.right embed{
+.formRight embed{
 	height: 500px;
 	width: 100%;
+	margin-top: 75px;
 }
-.right p {
+
+.formRight p {
 	margin: 0 40px 0 40px;
 	font-size: 20px;
 }
 
 .form {
 	width: 250vw;
+	margin-top: 75px;
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+		display: inline;
+	}
+
+	nav a {
+		font-size: 15px;
+		padding: 5px;
+	}
+
+	h1 {
+		font-size: 20px;
+		position: absolute;
+		left:50%;
+		color: white;
+		margin: 200px 0 0 -130px;
+	}
+
+	#video1 {
+		margin-top: 110px;
+	}
+
+	.homeImages img {
+		margin: 5px;
+		width: 100%;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	#arrow {
+		height: 0;
+	}
+
+	.homeFlexBox {
+		display: inline;
+	}
+
+	#homePano {
+		width: 96%;
+		margin: 5px;
+	}
+
+	#aboutMe {
+		margin: 5px;
+	}
+
+	#portfolioPano {
+		margin-top: 150px;
+	}
+
+	.mapFormFlex {
+		display: inline;
+		margin: 0;
+	}
+
+	.formRight embed{
+		margin-top: 0;
+	}
+
+	.formRight p {
+		margin: 0;
+		font-size: 20px;
+	}
+
+	.form {
+		margin-top: 0px;
+		width: 100%;
+	}
+
+	#logo {
+		height: 40px;
+	}	
 }

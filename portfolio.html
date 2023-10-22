@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Hello, world!</title>
+	<title>Portfolio - Airborne Captures</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link rel="icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="assets/icon.png">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="portfolio.html">Portfolio</a>
-			<a href="form.html">Request a Quote</a>
+			<a href="request-a-quote.html">Request a Quote</a>
 		</nav>
 	</div>
 
@@ -26,17 +27,56 @@
 		
 		<iframe id="portfolioPano" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/46UMq9RLeg"></iframe>
 		
-		<img src="assets/photos/04.png">
-		<img src="assets/photos/06.png">
-		<img src="assets/photos/07.png">
-		<img src="assets/photos/08.png">
-		<img src="assets/photos/09.png">
-		<img src="assets/photos/10.png">
-		<img src="assets/photos/11.png">
-		<img src="assets/photos/12.png">
-		<img src="assets/photos/13.png">
+		<img src="assets/photos/04.png" onclick="openOverlay(0)">
+		<img src="assets/photos/06.png" onclick="openOverlay(1)">
+		<img src="assets/photos/07.png" onclick="openOverlay(2)">
+		<img src="assets/photos/08.png" onclick="openOverlay(3)"> 
+		<img src="assets/photos/09.png" onclick="openOverlay(4)">
+		<img src="assets/photos/10.png" onclick="openOverlay(5)">
+		<img src="assets/photos/11.png" onclick="openOverlay(6)">
+		<img src="assets/photos/12.png" onclick="openOverlay(7)">
+		<img src="assets/photos/13.png" onclick="openOverlay(8)">
 
 	</div>
+
+	<div id="imageOverlay" class="overlay">
+		<span class="close" onclick="closeOverlay()">&times;</span>
+		<img id="overlayImage" src="" alt="Overlay Image">
+		<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+		<a class="next" onclick="changeImage(1)">&#10095;</a>
+	</div>
+
+	<script>
+		let currentImageIndex = 0;
+		const images = [
+			"assets/photos/04.png",
+			"assets/photos/06.png",
+			"assets/photos/07.png",
+			"assets/photos/08.png",
+			"assets/photos/09.png",
+			"assets/photos/10.png",
+			"assets/photos/11.png",
+			"assets/photos/12.png",
+			"assets/photos/13.png"
+		];
+
+		function openOverlay(imageIndex) {
+			document.getElementById("overlayImage").src = images[imageIndex];
+			currentImageIndex = imageIndex;
+			document.getElementById("imageOverlay").style.display = "block";
+		}
+
+		function closeOverlay() {
+			document.getElementById("imageOverlay").style.display = "none";
+		}
+
+		function changeImage(direction) {
+			currentImageIndex += direction;
+			if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+			if (currentImageIndex >= images.length) currentImageIndex = 0;
+			document.getElementById("overlayImage").src = images[currentImageIndex];
+		}
+	</script>
 
 </body>
 </html>
