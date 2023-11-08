@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Portfolio - Airborne Captures</title>
+	<title>Airborne Captures</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
@@ -15,29 +15,28 @@
 <body>
 
 	<div class="header">
-		<a href="index.html"><img src="assets/logo.jpeg" id="logo"></a>
+		<a href="index.html" id="logolink"><img src="assets/logo.jpeg" id="logo"></a>
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="portfolio.html">Portfolio</a>
-			<a href="form.html">Request a Quote</a>
+			<a href="form">Request a Quote</a>
 		</nav>
 	</div>
 
 	<div class="main">
-		<div class="portfolioContent">
-			
-			<iframe id="portfolioPano" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/46UMq9RLeg"></iframe>
-			
-			<img src="assets/photos/04.png" onclick="openOverlay(0)">
-			<img src="assets/photos/05.png" onclick="openOverlay(1)">
-			<img src="assets/photos/06.png" onclick="openOverlay(2)">
-			<img src="assets/photos/07.png" onclick="openOverlay(3)"> 
-			<img src="assets/photos/08.png" onclick="openOverlay(4)">
-			<img src="assets/photos/09.png" onclick="openOverlay(5)">
-			<img src="assets/photos/10.png" onclick="openOverlay(6)">
-			<img src="assets/photos/11.png" onclick="openOverlay(7)">
-			<img src="assets/photos/12.png" onclick="openOverlay(8)">
+		<div class="backgroundVideoBox">
+			<h1>Your World From Above</h1>
+			<img src="assets/arrow.gif" id="arrow">
 
+			<video loop muted autoplay id="video1">
+				<source src="assets/video1.mp4" type="video/mp4">
+			</video>
+		</div>
+		
+		<div class="homeImages">
+			<img src="assets/photos/01.png" alt="Image 1" onclick="openOverlay(0)">
+			<img src="assets/photos/02.png" alt="Image 2" onclick="openOverlay(1)">
+			<img src="assets/photos/03.png" alt="Image 3" onclick="openOverlay(2)">
 		</div>
 
 		<div id="imageOverlay" class="overlay">
@@ -50,15 +49,9 @@
 		<script>
 			let currentImageIndex = 0;
 			const images = [
-				"assets/photos/04.png",
-				"assets/photos/05.png",
-				"assets/photos/06.png",
-				"assets/photos/07.png",
-				"assets/photos/08.png",
-				"assets/photos/09.png",
-				"assets/photos/10.png",
-				"assets/photos/11.png",
-				"assets/photos/12.png"
+			  "assets/photos/01.png",
+			  "assets/photos/02.png",
+			  "assets/photos/03.png"
 			];
 
 			function openOverlay(imageIndex) {
@@ -91,6 +84,24 @@
 			  }, 300); // Adjust the time to match the CSS transition duration
 			}
 		</script>
+
+		<div class="homeFlexBox">
+			<div>
+				<iframe id="homePano" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/uMFctVfNrg"></iframe>
+			</div>
+			<div id="aboutMe">
+				<h2>About Me and My Services</h2>
+		        <p>
+		            My name is Ryan Stein, and I have had an interest in drones ever since I first got one when I was 11 years old. From that day on, I have devoloped my skills in drone photgraphy and videography. I currently work with L & B Travel, creating drone travel videos of all kinds.
+		            <ul>
+		                <li>I have over 50 hours of professional drone flight experience and would like to expand my horizons to all drone photography needs.</li> <br>
+		                <li>I provide drone photography services for all purposes to all those within a 40-mile radius of the Encino area of Los Angeles.</li> <br>
+		                <li>I will make sure I capture the shots you need and add in some of my own extra shots so you won’t miss out on a thing.</li> <br>
+		            </ul>
+		            Click on the “Request a Quote” tab and fill out the form there to request a quote.
+		        </p>
+			</div>
+		</div>
 	</div>
 
 </body>

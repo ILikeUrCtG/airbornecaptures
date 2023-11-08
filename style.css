@@ -3,42 +3,22 @@ body {
  	line-height: 1.6;
 }
 
+.main {
+	margin-top: 80px;
+}
+
 .header {
 	display: flex;
-	background: #ec6342;
+	background-color: #ec6342;
 	position: fixed;
-	z-index: 1;
 	width: 100%;
+	top: 0;
+	z-index: 1;
 }
 
 #logo {
 	height: 75px;
 	outline: 7px solid white;
-}
-
-.backgroundVideoBox {
-	position: relative;
-}
-
-#video1 {
-	width: 100%;
-	z-index: -1;
-	margin-top: 75px;
-}
-
-h1 {
-	font-size: 8vh;
-	position: absolute;
-	left:50%;
-	color: white;
-    margin: 175px 0 0 -48vh;
-	display: flex;
-}
-
-#arrow {
-	position: absolute;
-	left: 50%;
-    margin: 65vh 0 0 -160px;
 }
 
 nav {
@@ -52,6 +32,31 @@ nav a {
 	text-decoration: none;
 }
 
+.backgroundVideoBox {
+	position: relative;
+}
+
+h1 {
+	font-size: 8vh;
+	position: absolute;
+	left:50%;
+	color: white;
+    margin: 175px 0 0 -49vh;
+	display: flex;
+}
+
+
+#arrow {
+	position: absolute;
+	left: 50%;
+    margin: 65vh 0 0 -160px;
+}
+
+#video1 {
+	width: 100%;
+	z-index: -1;
+}
+
 .homeImages {
 	display: flex;
 	flex-wrap: wrap;
@@ -61,7 +66,7 @@ nav a {
 .homeImages img {
 	height: 20vw;
 	margin: 2vw;
-	border-radius: 10px;
+	border-radius: 5px;
 	cursor: pointer;
 }
 
@@ -81,8 +86,8 @@ nav a {
 	margin-top: 10%;
 	max-height: 70%;
 	opacity: 0;
-	transition: opacity 0.3s;
-	border-radius: 10px;
+	transition: opacity .3s;
+	border-radius: 5px;
 }
 
 .overlay img.active {
@@ -140,56 +145,48 @@ nav a {
 }
 
 .portfolioContent img {
-	height: 40vh;
-	margin: 20px;
-	border-radius: 10px;
+	width: 30vw;
+	height: 22vw;
+	margin: 15px;
+	border-radius: 5px;
 	cursor: pointer;
 }
 
 #portfolioPano {
-	height: 40vh;
-	width: 91vw;
-	margin: 120px 20px 20px 20px;
-	border-radius: 10px;
+	width: 30vw;
+	height: 22vw;
+	margin: 15px;
+	border-radius: 5px;
 	border: 1px solid white;
 }
 
-.mapFormFlex {
-	display: flex;
-}
-
-.formRight embed{
-	height: 500px;
-	width: 100%;
-	margin-top: 75px;
-}
-
-.formRight p {
-	margin: 0 40px 0 40px;
-	font-size: 20px;
-}
-
-.form {
-	width: 250vw;
-	margin-top: 75px;
+#float {
+	width: 200px;
+	height: 450px;
+	position: absolute;
+	right: 0px;
+	top: 155px;
+	border: 2px solid white;
+	color: white;
+	padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
+	.main {
+		margin-top: 40px;
+	}
+
 	.homeFlexBox {
 		display: inline;
 	}
 
 	#homePano {
-		margin: 20px;
-		width: 85%;
-		height: 100%;
-		border-radius: 10px;
-		border: 1px solid white;
+		margin: 0 15px 0 15px;
+		width: 90%;
 	}
 
 	#aboutMe {
 		margin: 0 20px 0 20px;
-		font-family: 'Open Sans', sans-serif;
 	}
 
 	nav {
@@ -212,7 +209,6 @@ nav a {
 	}
 
 	#video1 {
-		margin-top: 40px;
 	}
 
 	#arrow {
@@ -220,6 +216,20 @@ nav a {
 		left: 50%;
 		margin: 120px 0 0 -80px;
 		width: 150px;
+	}
+
+	.portfolioContent img {
+		width: 100%;
+		height: auto;
+	}
+
+	#portfolioPano {
+		width: 100%;
+		height: auto;
+	}
+
+	#float {
+		display: none;
 	}
 
 }
