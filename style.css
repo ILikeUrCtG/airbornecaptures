@@ -41,14 +41,14 @@ nav a {
 }
 
 h1 {
-	font-size: 8vh;
+	font-size: 5vw;
 	color: white;
 	display: flex;
 	position: absolute; 
 	left: 0; 
 	right: 0; 
-	margin: 150px auto 0 auto;
-	width: 90vh;
+	margin: 20vh auto 0 auto;
+	width: 55vw;
 }
 
 
@@ -192,28 +192,32 @@ h1 {
 }
 
 #float {
-	width: 200px;
-	height: 250px;
-	position: absolute;
+	width: 20vw;
+	height: 20vh;
+	position: fixed;
 	right: 0px;
-	top: 630px;
+	top: 60vh;
 	border: 2px solid white;
 	border-right: none;
 	color: white;
-	padding: 10px;
+	padding: 5px;
 }
 
 #map {
 	width: 100%;
-	height: 500px;
+	height: 50vh;
+	position: fixed;
+	margin-top: 7vh;
+}
 
+p {
 	margin: 0;
-	padding: 0;
 }
 
-#form { 
-	background: black;
+#form {
+	margin-top: 55vh;
 }
+
 @media only screen and (max-width: 600px) {
 	.main {
 		margin-top: 35px;
@@ -246,18 +250,16 @@ h1 {
 	}
 
 	h1 {
-		font-size: 20px;
-		margin: 50px;
-	}
-
-	#video1 {
+		margin: 12vh auto 0 auto;
+		font-size: 7vw;
+		width: 75vw;
 	}
 
 	#arrow {
 		width: 0;
 	}
 
-	.portfolioContent img {
+	.portfolioContent img, #portfoliovid {
 		width: 100%;
 		height: auto;
 	}
@@ -269,6 +271,14 @@ h1 {
 
 	#float {
 		display: none;
+	}
+
+	#map {
+		height: 40vh;
+	}
+
+	#form {
+		margin-top: 40vh;
 	}
 
 }
