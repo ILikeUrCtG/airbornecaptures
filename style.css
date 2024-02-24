@@ -4,7 +4,7 @@ body {
 }
 
 .main {
-	margin-top: 12vh;
+	margin-top: 75px;
 }
 
 .header {
@@ -13,12 +13,12 @@ body {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 1;
+	z-index: 2;
 }
 
 #logo {
-	height: 12vh;
-	margin-right: 3vh;
+	height: 75px;
+	margin-right: 10px;
 }
 
 #logolink {
@@ -30,8 +30,8 @@ nav {
 }
 
 nav a {
-	font-size: 3.5vh;
-	padding: 3vh;
+	font-size: 20px;
+	padding: 10px;
 	color: white;
 	text-decoration: none;
 }
@@ -52,7 +52,6 @@ h1 {
 	left: 50%;
 	margin: 20vw 0 0 -40px;
 	position: absolute;
-	z-index: -1;
 	user-select: none;
 }
 
@@ -100,27 +99,28 @@ h1 {
 
 .close {
 	position: absolute;
-	top: 20px;
-	right: 30px;
-	font-size: 60px;
+	top: 100px;
+	right: 3%;
+	font-size: 50px;
 	cursor: pointer;
 	color: white;
+	z-index: 3;
 }
 
 .prev, .next {
 	position: absolute;
 	top: 50%;
-	font-size: 30px;
+	font-size: 40px;
 	cursor: pointer;
 	color: white;
 }
 
 .prev {
-	left: 20px;
+	left: 3%;
 }
 
 .next {
-	right: 20px;
+	right: 3%;
 }
 
 .homeFlexBox {
@@ -169,11 +169,10 @@ h1 {
 }
 
 #float {
-	width: 18vw;
+	width: 15vw;
 	position: fixed;
 	left: 7px;
 	margin-top: 8px;
-	border-right: none;
 	font-family: Arial, sans-serif;
 	color: #342247;
 	position: fixed;
@@ -184,7 +183,7 @@ h1 {
 }
 
 #map {
-	width: 18vw;
+	width: 15vw;
 	height: 50vh;
 }
 
@@ -197,14 +196,14 @@ h5, p {
 	margin: 2px;;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
 	#float {
 		display: none;
 	}
 }
 @media only screen and (max-width: 600px) {
 	.main {
-		margin-top: 6vh;
+		margin-top: 35px;
 	}
 
 	.homeFlexBox {
@@ -242,7 +241,12 @@ h5, p {
 	}
 
 	#logo {
-		height: 8vh;
+		height: 35px;
 		margin-right: 6px;
+	}
+
+	.overlay img {
+		border-radius: 0px;
+		margin-top: 30%;
 	}
 }
