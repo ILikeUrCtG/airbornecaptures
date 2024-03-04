@@ -53,6 +53,7 @@ h1 {
 	margin: 20vw 0 0 -40px;
 	position: absolute;
 	user-select: none;
+	z-index: -10;
 }
 
 #video1 {
