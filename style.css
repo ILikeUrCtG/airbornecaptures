@@ -45,6 +45,7 @@ h1 {
 	right: 0; 
 	margin: 20vh auto 0 auto;
 	width: 55vw;
+	display: none;
 }
 
 #load {
