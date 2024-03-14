@@ -1,6 +1,7 @@
 body {
 	margin: 0;
- 	line-height: 1.4;
+	line-height: 1.4;
+	background-color: black;
 }
 
 .main {
@@ -49,9 +50,18 @@ h1 {
 }
 
 #load {
-	height: 75px;
+	width: 10vw;
 	left: 50%;
-	margin: 20vw 0 0 -40px;
+	margin: 30vh 0 0 -5vw;
+	position: absolute;
+	user-select: none;
+	z-index: -10;
+}
+
+#arrow{
+	width: 20vw;
+	left: 50%;
+	margin: 50vh 0 0 -10vw;
 	position: absolute;
 	user-select: none;
 	z-index: -10;
@@ -250,5 +260,9 @@ h5, p {
 	.overlay img {
 		border-radius: 0px;
 		margin-top: 30%;
+	}
+
+	#arrow {
+		display: none;
 	}
 }
