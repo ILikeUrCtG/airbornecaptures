@@ -3,6 +3,54 @@ body {
 	line-height: 1.4;
 }
 
+/*colors + stye*/
+
+/*to apply, place tags around text like <red>this</red>	*/
+
+bold {
+	font-weight: bold;
+}
+
+italic {
+	font-weight: italic;
+}
+
+underline {
+	font-weight: underline;
+}
+
+red {
+	color: red;
+}
+
+lightblue {
+	color: lightblue;
+}
+
+darkblue {
+	color: darkblue;
+}
+
+purple {
+	color: #342247;
+}
+
+orange {
+	color: #ec6342;
+}
+
+green{
+	color: #4b6302;
+}
+
+turquoise {
+	color: #4f8a89;
+}
+
+yellow {
+	color: yellow;
+}
+
 .main {
 	margin-top: 75px;
 }
@@ -13,7 +61,7 @@ body {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 2;
+	z-index: 2
 }
 
 #logo {
@@ -46,6 +94,7 @@ h1 {
 	margin: 20vh auto 0 auto;
 	width: 55vw;
 	display: none;
+	z-index: 1;
 }
 
 #load {
@@ -54,7 +103,7 @@ h1 {
 	margin: 30vh 0 0 -5vw;
 	position: absolute;
 	user-select: none;
-	z-index: -10;
+	z-index: -1;
 }
 
 #arrow{
@@ -63,12 +112,11 @@ h1 {
 	margin: 50vh 0 0 -10vw;
 	position: absolute;
 	user-select: none;
-	z-index: 10;
+	z-index: 1;
 }
 
 #video1 {
 	width: 100%;
-	z-index: -1;
 }
 
 .homeImages {
