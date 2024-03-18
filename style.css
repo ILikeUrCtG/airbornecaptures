@@ -190,6 +190,7 @@ h1 {
 #aboutMe {
 	margin: 0 2vw 0 2vw;
 	font-family: 'Open Sans', sans-serif;
+	line-height: 3;
 }
 
 #homePano {
