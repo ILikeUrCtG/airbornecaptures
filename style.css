@@ -52,7 +52,7 @@ yellow {
 }
 
 .main {
-	margin-top: 75px;
+	margin-top: 10vh;
 }
 
 .header {
@@ -65,7 +65,7 @@ yellow {
 }
 
 #logo {
-	height: 75px;
+	height: 10vh;
 	margin-right: 10px;
 }
 
@@ -95,6 +95,11 @@ h1 {
 	width: 55vw;
 	display: none;
 	z-index: 1;
+}
+
+#ig {
+	height: 5vh;
+	margin: auto 1vw auto 0;
 }
 
 #load {
@@ -222,10 +227,15 @@ h1 {
 	border: none;
 }
 
-#portfoliovid {
+.portfoliovid {
 	width: 30vw;
 	margin: 1vw;
 	border-radius: 5px;
+}
+
+#temp {
+	border-radius: 5px;
+	margin-top: 2vw;
 }
 
 #float {
@@ -261,9 +271,13 @@ h5, p {
 		display: none;
 	}
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
 	.main {
 		margin-top: 35px;
+	}
+
+	#ig {
+		height: 20px;
 	}
 
 	.homeFlexBox {
@@ -296,7 +310,7 @@ h5, p {
 	}
 
 	nav a {
-		font-size: 12px;
+		font-size: 10px;
 		padding: 3px;
 	}
 
@@ -312,5 +326,14 @@ h5, p {
 
 	#arrow {
 		display: none;
+	}
+
+	#load {
+		margin: 15vh 0 0 -5vw;
+	}
+
+	.overlay img {
+	position: fixed;
+    transform: translateX(-220px);
 	}
 }
