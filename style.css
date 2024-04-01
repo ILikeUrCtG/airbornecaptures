@@ -114,7 +114,7 @@ h1 {
 #arrow{
 	width: 20vw;
 	left: 50%;
-	margin: 50vh 0 0 -10vw;
+	margin: 30vw 0 0 -10vw;
 	position: absolute;
 	user-select: none;
 	z-index: 1;
@@ -150,7 +150,7 @@ h1 {
 }
 
 .overlay img {
-	margin-top: 10%;
+	margin-top: 12%;
 	max-height: 70%;
 	opacity: 0;
 	transition: opacity .3s;
@@ -222,6 +222,7 @@ h1 {
 
 #portfolioPano {
 	width: 30vw;
+	height: 35vh;
 	margin: 1vw;
 	border-radius: 5px;
 	border: none;
@@ -299,14 +300,13 @@ h5, p {
 		width: 75vw;
 	}
 
-	.portfolioContent img, #portfoliovid {
+	.portfolioContent img, .portfoliovid {
 		width: 100%;
 		height: auto;
 	}
 
 	#portfolioPano {
 		width: 100%;
-		height: auto;
 	}
 
 	nav a {
@@ -319,11 +319,6 @@ h5, p {
 		margin-right: 6px;
 	}
 
-	.overlay img {
-		border-radius: 0px;
-		margin-top: 30%;
-	}
-
 	#arrow {
 		display: none;
 	}
@@ -334,6 +329,6 @@ h5, p {
 
 	.overlay img {
 	position: fixed;
-    transform: translateX(-220px);
+    transform: translateX(-46.5vh);
 	}
 }
