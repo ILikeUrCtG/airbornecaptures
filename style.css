@@ -3,10 +3,6 @@ body {
 	line-height: 1.4;
 }
 
-/*colors + stye*/
-
-/*to apply, place tags around text like <red>this</red>	*/
-
 bold {
 	font-weight: bold;
 }
@@ -208,30 +204,31 @@ h1 {
 }
 
 .portfolioContent {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .portfolioContent img {
-	width: 30vw;
-	margin: 1vw;
-	border-radius: 5px;
-	cursor: pointer;
+    width: 30vw;
+    margin: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #portfolioPano {
-	width: 30vw;
-	height: 35vh;
-	margin: 1vw;
-	border-radius: 5px;
-	border: none;
+    width: 30vw;
+    height: 12.8vw;
+    margin: 1vw;
+    border-radius: 5px;
+    border: none;
 }
 
 .portfoliovid {
-	width: 30vw;
-	margin: 1vw;
-	border-radius: 5px;
+    width: 30vw;
+    margin: 1vw;
+    border-radius: 5px;
+    pointer-events: none;
 }
 
 #temp {
@@ -302,11 +299,11 @@ h5, p {
 
 	.portfolioContent img, .portfoliovid {
 		width: 100%;
-		height: auto;
 	}
 
 	#portfolioPano {
 		width: 100%;
+		height: 50vw;
 	}
 
 	nav a {
@@ -328,7 +325,13 @@ h5, p {
 	}
 
 	.overlay img {
-	position: fixed;
-    transform: translateX(-46.5vh);
+		position: fixed;
+		left: 0;
+		top: 20%;
+		width: 100%;
+	}
+
+	.close {
+		top: 5%;
 	}
 }
